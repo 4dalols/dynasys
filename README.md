@@ -4,12 +4,12 @@ A browser playground of interactive dynamical systems. Every world has live para
 
 | Category | Simulations |
 | --- | --- |
-| Swarms & Life | Fish school (boids + sharks), Ant colony (pheromone foraging), Particle life, Synchronizing fireflies (Kuramoto) |
-| Cosmos & Mechanics | Gravity sandbox (planet formation, galaxy collision, figure-eight 3-body, …) |
-| Chaos | Double pendulum fan, Strange attractors (Lorenz, Rössler, Aizawa, Thomas, …), Magnetic pendulum basins |
-| Growth & Patterns | Fungal mycelium, Slime mold (Physarum), Gray–Scott reaction–diffusion, Life-like automata, DLA crystals, Abelian sandpile, Forest fire |
-| Waves & Fluids | Ripple tank (wave equation), Smoke & ink (stable fluids), Cyclic CA spirals, Ising magnet |
-| Societies | Rabbits & foxes ecosystem, Epidemic (SIRS), Phantom traffic jams (IDM) |
+| Swarms & Life | Fish school (boids + sharks), Starling murmuration (3D topological flocking), Ant colony (pheromone foraging), Particle life, Synchronizing fireflies (Kuramoto), Rock–paper–scissors species |
+| Cosmos & Mechanics | Gravity sandbox (planet formation, galaxy collision, figure-eight 3-body, …), Gas in a box (Maxwell–Boltzmann, Brownian motion), Tearable cloth (Verlet), Electric field lines |
+| Chaos | Double pendulum fan, Strange attractors (Lorenz, Rössler, Aizawa, Thomas, …), Attractor lace (Clifford / de Jong maps), Road to chaos (bifurcation diagrams + cobwebs), Magnetic pendulum basins |
+| Growth & Patterns | Fungal mycelium, Slime mold (Physarum), Gray–Scott reaction–diffusion, Lenia, Life-like automata, Langton's ant / turmites, DLA crystals, Abelian sandpile, Forest fire |
+| Waves & Fluids | Falling sand (elements + reactions), Ripple tank (wave equation), Smoke & ink (stable fluids), Cyclic CA spirals, Ising magnet |
+| Societies | Rabbits & foxes ecosystem, Epidemic (SIRS), Phantom traffic jams (IDM), Prisoner's dilemma grid, Schelling segregation |
 
 Keyboard: `space` pause · `.` step · `r` reset · `h` hide panel · `esc` back. Parameter changes are written to the URL so you can share a configuration.
 
