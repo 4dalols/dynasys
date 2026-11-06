@@ -2,6 +2,7 @@ import type { SimDef } from '../core/types';
 import { fish } from './fish';
 import { murmuration } from './murmuration';
 import { ants } from './ants';
+import { antwars } from './antwars';
 import { particleLife } from './particlelife';
 import { fireflies } from './fireflies';
 import { rps } from './rps';
@@ -33,12 +34,15 @@ import { epidemic } from './epidemic';
 import { traffic } from './traffic';
 import { prisoners } from './prisoners';
 import { schelling } from './schelling';
+import { battlefield } from './battlefield';
+import { empires } from './empires';
+import { alliances } from './alliances';
 
 export const SIMS: SimDef[] = [
-  fish, murmuration, ants, particleLife, fireflies, rps,
+  fish, murmuration, ants, antwars, particleLife, fireflies, rps,
   gravity, gas, cloth, charges,
   pendulum, attractors, clifford, logistic, magnetic,
   mycelium, physarum, reaction, lenia, life, turmites, dla, sandpile, forestfire,
   sand, ripple, fluid, cyclic, ising,
-  ecosystem, epidemic, traffic, prisoners, schelling,
+  ecosystem, epidemic, traffic, prisoners, schelling, battlefield, empires, alliances,
 ];
