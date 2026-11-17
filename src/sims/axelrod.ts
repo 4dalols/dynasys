@@ -234,6 +234,7 @@ export const axelrod: SimDef = {
     };
     const invade = () => {
       const s = +(P.brush as string);
+      if (!inc.includes(s)) return;
       if (!spatial) { x[s] += 0.05; let t = 0; for (let i = 0; i < NS; i++) t += x[i]; for (let i = 0; i < NS; i++) x[i] /= t; }
       else for (let i = 0; i < G; i++) if (Math.random() < 0.05) g[i] = s;
     };
@@ -243,6 +244,7 @@ export const axelrod: SimDef = {
       pointer(p) {
         if (!spatial || !p.down) return;
         const s = +(P.brush as string), cx = (p.x / cs) | 0, cy = (p.y / cs) | 0;
+        if (!inc.includes(s)) return;
         for (let dy = -3; dy <= 3; dy++) for (let dx = -3; dx <= 3; dx++) {
           const xx = cx + dx, yy = cy + dy;
           if (xx >= 0 && yy >= 0 && xx < gw && yy < gh && dx * dx + dy * dy <= 9) g[yy * gw + xx] = s;
