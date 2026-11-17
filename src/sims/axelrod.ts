@@ -149,7 +149,7 @@ export const axelrod: SimDef = {
           let p = 0;
           for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) {
             const j = ((yy + dy + gh) % gh) * gw + ((xx + dx + gw) % gw);
-            p += M[s * NS + g[j]];
+            if (dx || dy) p += M[s * NS + g[j]];
           }
           pay[i] = p;
         }
