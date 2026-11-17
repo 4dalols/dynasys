@@ -37,6 +37,10 @@ import { schelling } from './schelling';
 import { battlefield } from './battlefield';
 import { empires } from './empires';
 import { alliances } from './alliances';
+import { landgrab } from './landgrab';
+import { tron } from './tron';
+import { axelrod } from './axelrod';
+import { pathrace } from './pathrace';
 
 export const SIMS: SimDef[] = [
   fish, murmuration, ants, antwars, particleLife, fireflies, rps,
@@ -45,4 +49,5 @@ export const SIMS: SimDef[] = [
   mycelium, physarum, reaction, lenia, life, turmites, dla, sandpile, forestfire,
   sand, ripple, fluid, cyclic, ising,
   ecosystem, epidemic, traffic, prisoners, schelling, battlefield, empires, alliances,
+  landgrab, tron, axelrod, pathrace,
 ];

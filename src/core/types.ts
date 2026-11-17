@@ -91,7 +91,7 @@ export interface Preset {
   values: Params;
 }
 
-export type Category = 'Swarms & Life' | 'Cosmos & Mechanics' | 'Chaos' | 'Growth & Patterns' | 'Waves & Fluids' | 'Societies';
+export type Category = 'Swarms & Life' | 'Cosmos & Mechanics' | 'Chaos' | 'Growth & Patterns' | 'Waves & Fluids' | 'Societies' | 'Algorithms at War';
 
 export interface SimDef {
   id: string;
