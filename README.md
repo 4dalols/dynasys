@@ -10,6 +10,7 @@ A browser playground of interactive dynamical systems. Every world has live para
 | Growth & Patterns | Fungal mycelium, Slime mold (Physarum), Gray–Scott reaction–diffusion, Lenia, Life-like automata, Langton's ant / turmites, DLA crystals, Abelian sandpile, Forest fire |
 | Waves & Fluids | Falling sand (elements + reactions), Ripple tank (wave equation), Smoke & ink (stable fluids), Cyclic CA spirals, Ising magnet |
 | Societies | Rabbits & foxes ecosystem, Epidemic (SIRS), Phantom traffic jams (IDM), Prisoner's dilemma grid, Schelling segregation, Battlefield (RPS unit types + morale), Rise of empires (territory + diplomacy), Alliance network (structural balance) |
+| Algorithms at War | Land grab bots (strategies + powers), Tron light-cycle AIs (Voronoi, flood fill, hunter; playable), Axelrod tournament (iterated PD, replicator + spatial), Pathfinding race (BFS/DFS/Dijkstra/A*/greedy) |
 
 Keyboard: `space` pause · `.` step · `r` reset · `h` hide panel · `esc` back. Parameter changes are written to the URL so you can share a configuration.
 

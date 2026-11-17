@@ -1,6 +1,6 @@
 import type { ParamDef, ParamGroup, Params, PointerInfo, SimDef, SimInstance } from './types';
 
-const CATEGORY_ORDER = ['Swarms & Life', 'Cosmos & Mechanics', 'Chaos', 'Growth & Patterns', 'Waves & Fluids', 'Societies'];
+const CATEGORY_ORDER = ['Swarms & Life', 'Cosmos & Mechanics', 'Chaos', 'Growth & Patterns', 'Waves & Fluids', 'Societies', 'Algorithms at War'];
 const THUMB_VERSION = 'v1';
 
 function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, html?: string): HTMLElementTagNameMap[K] {
