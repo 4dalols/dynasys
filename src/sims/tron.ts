@@ -26,7 +26,7 @@ export const tron: SimDef = {
   tagline: 'Light cycles leave walls behind them. Which brain survives longest: grab territory, maximise space, hunt, or hug the walls? Or take the wheel yourself.',
   category: 'Algorithms at War',
   accent: '#22d3ee',
-  controls: 'Drag to draw obstacles · pick “You” as a driver and steer with arrow keys / WASD',
+  controls: 'Drag to draw obstacles · pick “You” as a driver and steer with arrow keys / WASD (two “You” drivers: arrows vs WASD)',
   thumbSteps: 140,
   params: [
     { key: 'riders', label: 'Riders', min: 2, max: 4, step: 1, default: 2, reset: true },
@@ -259,13 +259,16 @@ export const tron: SimDef = {
       }
     };
 
-    const KEYS: Record<string, number> = { ArrowRight: 0, ArrowDown: 1, ArrowLeft: 2, ArrowUp: 3, d: 0, s: 1, a: 2, w: 3 };
-    const human = ai.indexOf('human');
+    const ARROWS: Record<string, number> = { ArrowRight: 0, ArrowDown: 1, ArrowLeft: 2, ArrowUp: 3 };
+    const WASD: Record<string, number> = { d: 0, s: 1, a: 2, w: 3 };
+    const humans = ai.flatMap((a, i) => (a === 'human' ? [i] : []));
     const onKey = (e: KeyboardEvent) => {
-      if (human < 0 || !(e.key in KEYS)) return;
+      const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+      const arrow = k in ARROWS;
+      if (!humans.length || !(arrow || k in WASD)) return;
       if ((e.target as HTMLElement)?.tagName === 'INPUT' || (e.target as HTMLElement)?.tagName === 'SELECT') return;
       e.preventDefault();
-      pending[human] = KEYS[e.key];
+      pending[arrow ? humans[0] : humans[1] ?? humans[0]] = arrow ? ARROWS[k] : WASD[k];
     };
     if (!thumbnail) window.addEventListener('keydown', onKey);
 
