@@ -173,7 +173,7 @@ export const tron: SimDef = {
           case 'wallhug': {
             let walls = 0;
             for (let e = 0; e < 4; e++) if (!free(nx + DX[e], ny + DY[e])) walls++;
-            s = (safe ? 1000 : area[k]) + walls * 2 + (d === cur ? 0.5 : 0); break;
+            s = (safe ? 1e5 : area[k]) + walls * 2 + (d === cur ? 0.5 : 0); break;
           }
           case 'hunter': {
             let tx = gw / 2, ty = gh / 2, bd = 1e9;
@@ -182,7 +182,7 @@ export const tron: SimDef = {
               const px = hx[o] + DX[hd[o]] * 5, py = hy[o] + DY[hd[o]] * 5, dd = Math.abs(px - hx[b]) + Math.abs(py - hy[b]);
               if (dd < bd) { bd = dd; tx = px; ty = py; }
             }
-            s = (safe ? 1000 : area[k]) - Math.hypot(tx - nx, ty - ny); break;
+            s = (safe ? 1e5 : area[k]) - Math.hypot(tx - nx, ty - ny); break;
           }
           default: s = (area[k] < maxA * 0.5 ? area[k] - 1e5 : 0) + voronoi(b, nx, ny, cap) + (d === cur ? 0.3 : 0);
         }
