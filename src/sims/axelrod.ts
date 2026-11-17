@@ -130,7 +130,14 @@ export const axelrod: SimDef = {
       hist.push(Float32Array.from(s));
       if (hist.length > HMAX) hist.shift();
       fbar = 0;
-      for (const i of inc) for (const j of inc) fbar += s[i] * s[j] * M[i * NS + j];
+      if (spatial) {
+        for (let yy = 0; yy < gh; yy++) for (let xx = 0; xx < gw; xx++) {
+          const c = g[yy * gw + xx];
+          for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++)
+            if (dx || dy) fbar += M[c * NS + g[((yy + dy + gh) % gh) * gw + ((xx + dx + gw) % gw)]];
+        }
+        fbar /= 8 * G;
+      } else for (const i of inc) for (const j of inc) fbar += s[i] * s[j] * M[i * NS + j];
     };
     record();
     const step = () => {
